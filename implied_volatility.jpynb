@@ -1,0 +1,14 @@
+
+V0 = 16
+r = 0.01
+
+import pandas as pd
+h5 = pd.HDFStore(./vstoxx_data_31032014.h5', 'r')
+
+futures_data = h5['futures_data']
+options_data = h5['options_data']
+h5.close()
+
+futures_data
+
+options_data.info()
