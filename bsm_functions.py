@@ -25,6 +25,6 @@ def bsm_vega(S0, K, T, r, sigma):
 def bsm_call_imp_vol(S0, K, T, r, C0, sigma_est, it=100):
     
     for i in range(it):
-        sigma_est -= ((bsm_call_value(S0, K, T, r, sigma_est) - C0) / bsm_vega(S0, K, T, r, sigma_est)
+        sigma_est -= (bsm_call_value(S0, K, T, r, sigma_est) - C0) / bsm_vega(S0, K, T, r, sigma_est)
         
     return sigma_est
